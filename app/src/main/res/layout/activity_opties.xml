@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.siebren.roosterapp.OptiesActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Inlognaam"
+        android:id="@+id/txtUsername"
+        android:layout_marginTop="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editUsername"
+        android:selectAllOnFocus="false"
+        android:layout_below="@+id/txtUsername"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Wachtwoord"
+        android:id="@+id/txtPassword"
+        android:layout_below="@+id/editUsername"
+        android:layout_alignStart="@+id/txtUsername" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/editPassword"
+        android:layout_below="@+id/txtPassword"
+        android:layout_centerHorizontal="true" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerKlas"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/editPassword"
+        android:layout_alignEnd="@+id/editPassword" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Klas"
+        android:id="@+id/txtKlas"
+        android:layout_above="@+id/spinnerKlas"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gegevens opslaan"
+        android:id="@+id/btnSave"
+        android:layout_marginBottom="23dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnSave"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="28dp"
+        android:id="@+id/radioGroupWeek">
+
+        <TextView
+            android:text="Welke roosterweek?"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtWeek"
+            android:layout_width="wrap_content"
+            android:layout_marginBottom="17dp"
+            android:layout_above="@+id/radioGroup"
+            android:layout_alignStart="@+id/spinnerKlas"
+            android:clickable="false"
+            android:editable="false" />
+
+        <RadioButton
+            android:text="Deze week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbDezeWeek"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:text="Volgende week"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rbVolgendeWeek"
+            android:layout_weight="1" />
+    </RadioGroup>
+
+</RelativeLayout>
